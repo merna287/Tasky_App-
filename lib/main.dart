@@ -140,3 +140,23 @@ class _MyHomePageState extends State<MyHomePage> {
       //     color: "#5F33E1"
 // 4- run => dart run flutter_native_splash:create --path=flutter_native_splash.yaml
 
+// 1- add package flutter_launcher_icons in pubspec.yaml dev_dependencies
+// icons app logo
+// 2- go ios:
+// # add image icon in assets say icon-launcher.png
+// 3- app Android:
+// # go to web page romannurik.github.io
+// # download icon app
+// # add icon in assets say play-store-icon-launcher.png
+
+// write in pubspec.yaml part of dev_dependencies
+// flutter_icons:
+//   android: true
+//   ios: true
+//   image_path: "assets/icons/icon-launcher.png"
+//   adaptive_icon_background: "#5F33E1"
+//   adaptive_icon_foreground: "assets/icons/play-store-icon-launcher.png"
+
+// final run this
+// flutter pub get
+// flutter pub run flutter_launcher_icons:main
