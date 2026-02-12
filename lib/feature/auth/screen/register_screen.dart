@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tasky_app/core/helper/validetor_app.dart';
+import 'package:tasky_app/core/utils/validetor_app.dart';
 import 'package:tasky_app/core/network/result_firebase.dart';
-import 'package:tasky_app/core/widgets/app_dialog.dart';
+import 'package:tasky_app/core/utils/app_dialog.dart';
 import 'package:tasky_app/feature/auth/data/firebase/auth_firebase_database.dart';
 import 'package:tasky_app/feature/auth/data/model/user_model.dart';
 import 'package:tasky_app/feature/auth/screen/login_screem.dart';
