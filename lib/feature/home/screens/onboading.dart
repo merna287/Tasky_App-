@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/feature/auth/screen/login_screem.dart';
-import 'package:tasky_app/feature/data/onboarding_data.dart';
+import 'package:tasky_app/feature/home/data/onboarding_data.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

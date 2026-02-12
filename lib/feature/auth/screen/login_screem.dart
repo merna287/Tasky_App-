@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tasky_app/core/helper/validetor_app.dart';
+import 'package:tasky_app/core/utils/validetor_app.dart';
 import 'package:tasky_app/core/network/result_firebase.dart';
-import 'package:tasky_app/core/widgets/app_dialog.dart';
+import 'package:tasky_app/core/utils/app_dialog.dart';
 import 'package:tasky_app/feature/auth/data/firebase/auth_firebase_database.dart';
 import 'package:tasky_app/feature/auth/screen/register_screen.dart';
+import 'package:tasky_app/feature/home/screens/home_screen.dart';
 import 'package:tasky_app/feature/home/widgets/text_form_field_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -90,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Spacer(),
                 GestureDetector(
                   onTap: () {
+                    _clearFields();
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -136,6 +138,12 @@ class _LoginScreenState extends State<LoginScreen> {
     AppDialog.hideLoading(context);
     switch (result) {
       case Success<String>():
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const HomeScreen(),
+          ),
+        );
         break;
       case ErrorState<String>():
         AppDialog.showError(
